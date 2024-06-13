@@ -103,7 +103,7 @@
             </tr>
             <tr>
                 <td><label for="time">Delivery Time</label></td>
-                <td><input name="time" class="input" id="time-input"></td>
+                <td><input name="time" type="time" class="input" id="time-input"></td>
             </tr>
         </table>
         <button id="submit">Submit</button>
@@ -149,7 +149,7 @@
                 alert('Please enter valid indices for starter and main menu.');
             } else {
                 const order = restaurant.order(starterIndex, mainIndex);
-              document.getElementById("demo").textContent = (`Order Confirmed! Your order of ${order[0]} and ${order[1]} will be delivered to ${address.value} at ${time.value}.`);
+              document.getElementById("demo").textContent = (`Order Confirmed!💥 Your order of ${order[0]} and ${order[1]} will be delivered to ${address.value} at ${time.value}.`);
                 console.log(order[0], order[1]);
             }
         });
