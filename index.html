@@ -55,6 +55,10 @@
             font-size: 16px;
             
         }
+        thead{
+            color: rgb(28, 212, 83);
+            font-weight: bold;
+        }
          
     </style>
 </head>
@@ -87,11 +91,11 @@
         <table>
             <tr>
                 <td><label for="starter">Starter Menu</label></td>
-                <td><input name="starter" class="input" id="starter-input" placeholder="Enter starter index"></td>
+                <td><input name="starter" class="input" id="starter-input" placeholder="Enter starter"></td>
             </tr>
             <tr>
                 <td><label for="main">Main Menu</label></td>
-                <td><input name="main" class="input" id="main-input" placeholder="Enter main index"></td>
+                <td><input name="main" class="input" id="main-input" placeholder="Enter main"></td>
             </tr>
             <tr>
                 <td><label for="address">Delivery Address</label></td>
@@ -117,7 +121,7 @@
             location: 'Via Angelo Tavanti 23, Firenze, Italy',
             categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
             starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
-            mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+            mainMenu: ['Pizza', 'Pasta', 'Risotto','Burger'],
             ordertimings: {
                 thu: {
                     open: '10:00 AM',
