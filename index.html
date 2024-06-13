@@ -1,124 +1,3 @@
-<!--<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
- <style>
-    body {
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(to top left, rgb(0, 166, 255), rgb(0, 255, 132));
-        background-repeat: no-repeat;
-        height: 100vh;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .index {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-    }
-
-    button{
-        display: inline-block;
-        text-align: center;
-        /* justify-content: center;
-            display: flex; */
-        border: 1px solid black;
-        text-decoration: none;
-        color: rgb(26, 18, 12);
-        font-size: 24px;
-        font-weight: bold;
-        margin-top: 20PX;
-        background-color: rgb(107, 196, 29);
-        border-radius: 5px;
-        padding: 4px 8px;
-
-    }
-
-    .input {
-        background-color: transparent;
-        /* border: 1px solid black; */
-        border: none;
-        border-radius: 5px;
-        padding: 6px;
-        margin-bottom: 6px;
-        box-shadow: 1px 2px 1px 1px rgb(90, 88, 88);
-    }
-
-    label {
-        font-size: 20px;
-        margin-right: 20px;
-    }
-</style> 
-
-<body>
-    <div class="index">
-        <h3>Confirm your order to Enter the below details</h3>
-        <table>
-            <tr>
-                <td><label for="starter">Stater Menu</label></td>
-                <td><input name="starter" class="input" id="starter-input"></td></b>
-            </tr>
-            <tr>
-                <td><label for="main">Main Menu</label></td>
-                <td><input name="main" class="input" id="main-input"></td>
-            </tr>
-            <tr>
-                <td><label for="address">Delivery Address</label></td>
-                <td><input name="address" class="input" id="address-input"></td>
-            </tr>
-            <tr>
-                <td><label for="time">Delivery Time</label></td>
-                <td><input name="time" class="input" id="time-input"></td>
-            </tr>
-        </table>
-         <button id = submit>Submit</button>
-    </div>-->
-<!-- <script>
-        const starter = document.getElementById("starter-input");
-        const main = document.getElementById("main-input");
-        const address = document.getElementById("address-input");
-        const time = document.getElementById("time-input");
-        const submit = document.getElementById("submit");
-
-        const restaurant = {
-            names: 'Classico Italiano',
-            location: 'Via Angelo Tavanti 23, Firenze, Italy',
-            categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
-            starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
-            mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-
-            thu: {
-                open: '10:00 AM',
-                close: '11:00 PM',
-            },
-            fri: {
-                open: '11:00 AM',
-                close: '11:00 AM',
-            },
-            sat: {
-                open: '01:00 PM',
-                close: '10:00 PM',
-            },
-            order: function (starterIndex, mainIndex) {
-                return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-            },
-        }
-        submit.addEventListener('click', function(){
-            alert(restaurant.order(starter.textContent,main.textContent));
-            alert(`Order Confirmed! Your Order is ${restaurant.starterMenu[starterIndex]} and ${restaurant.mainMenu[mainIndex]} are delivered in ${address.value} at ${time.vasue}`);
-        })
-    </script> -->
-<!-- </body>
-
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -196,6 +75,7 @@
             </tr>
         </table>
         <button id="submit">Submit</button>
+        <p id="demo"></p>
     </div>
     <script>
         const starter = document.getElementById("starter-input");
@@ -237,7 +117,7 @@
                 alert('Please enter valid indices for starter and main menu.');
             } else {
                 const order = restaurant.order(starterIndex, mainIndex);
-                alert(`Order Confirmed! Your order of ${order[0]} and ${order[1]} will be delivered to ${address.value} at ${time.value}.`);
+              document.getElementById("demo").textContent = (`Order Confirmed! Your order of ${order[0]} and ${order[1]} will be delivered to ${address.value} at ${time.value}.`);
                 console.log(order[0], order[1]);
             }
         });
