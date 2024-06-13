@@ -50,11 +50,39 @@
             font-size: 20px;
             margin-right: 20px;
         }
+        p{
+            padding: 50px;
+            font-size: 16px;
+            
+        }
+         
     </style>
 </head>
 
 <body>
     <div class="index">
+        <table border="1">
+            <thead>
+                <td>STARTERS</td>
+                <td>MAIN</td>
+            </thead>
+            <tr>
+                <td>1.Focaccia</td>
+                <td>1.Pizza</td>
+            </tr>
+            <tr>
+                <td>2.Bruschetta</td>
+                <td>2.Pasta</td>
+            </tr>
+            <tr>
+                <td>3.Garlic Bread</td>
+                <td>3.Risotto</td>
+            </tr>
+            <tr>
+                <td>4.Caprese Salad</td>
+                <td>4.Burger</td>
+            </tr>
+        </table>
         <h3>Confirm your order to Enter the below details</h3>
         <table>
             <tr>
@@ -110,8 +138,8 @@
         };
 
         submit.addEventListener('click', function () {
-            const starterIndex =(starter.value);
-            const mainIndex = (main.value);
+            const starterIndex =(starter.value -1);
+            const mainIndex = (main.value -1);
 
             if (isNaN(starterIndex) || isNaN(mainIndex) || starterIndex < 0 || starterIndex >= restaurant.starterMenu.length || mainIndex < 0 || mainIndex >= restaurant.mainMenu.length) {
                 alert('Please enter valid indices for starter and main menu.');
